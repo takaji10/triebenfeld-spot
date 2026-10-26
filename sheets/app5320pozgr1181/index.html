@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot sheet — APP 53/20/0/-/Poznań Gr.1181</title>
+<style>
+  :root { --ink:#1a1a1a; --accent:#1a5c8a; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Georgia,serif; color:var(--ink);
+         background:#f4f1ea; }
+  header { background:var(--accent); color:#fff; padding:14px 16px;
+           position:sticky; top:0; z-index:5; }
+  header h1 { font-size:1.05rem; margin:0 0 2px; }
+  header p { margin:0; font-size:.8rem; opacity:.85; }
+  main { padding:12px; max-width:760px; margin:0 auto; }
+  h2 { font-size:1rem; letter-spacing:.06em; text-transform:uppercase;
+       border-bottom:2px solid var(--accent); padding-bottom:4px; margin:28px 0 10px; }
+  .row { background:#fff; border:1px solid #d8d2c4; border-radius:8px;
+         padding:12px; margin:14px 0; }
+  .row h3 { font-family:ui-monospace,monospace; font-size:.8rem; margin:0 0 8px;
+            color:#666; }
+  .row img { width:100%; border:1px solid #ccc; border-radius:4px; }
+  .wrongline { margin:6px 0 0; font-size:.8rem; color:#a05a00; background:#fdf3e4;
+               border:1px solid #e8cfa0; padding:8px 10px; border-radius:6px;
+               width:100%; font-family:inherit; }
+  .wrongline.chosen { background:#a05a00; color:#fff; }
+  .q { font-size:.95rem; margin:10px 0 4px; }
+  .ctx { font-size:.78rem; color:#555; font-style:italic; margin:0 0 8px;
+         word-break:break-word; }
+  .note { font-size:.78rem; color:#666; margin:8px 0 0; }
+  .opts { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+  .opt { flex:1 1 auto; min-width:100px; padding:12px 10px; font-size:.9rem;
+         font-family:inherit; border:2px solid var(--accent); background:#fff;
+         border-radius:6px; color:var(--accent); }
+  .opt.chosen { background:var(--accent); color:#fff; }
+  .free { width:100%; padding:10px; font-size:.95rem; font-family:inherit;
+          border:1px solid #bbb; border-radius:6px; margin-top:2px; }
+  .free.chosen { border-color:var(--accent); background:#eef4f8; }
+  #bar { position:fixed; bottom:0; left:0; right:0; background:#fff;
+         border-top:1px solid #ccc; padding:10px 12px; display:flex; gap:10px;
+         z-index:6; }
+  #bar button { flex:1; padding:14px; font-size:1rem; font-family:inherit;
+                border:0; border-radius:8px; }
+  #copy { background:var(--accent); color:#fff; }
+  #clear { background:#eee; }
+  #status { font-size:.8rem; align-self:center; color:#555; }
+  textarea { width:100%; height:40vh; font-family:ui-monospace,monospace;
+             font-size:.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Spot sheet — APP 53/20/0/-/Poznań Gr.1181</h1>
+  <p>66 readings for the editor · tap an answer, or write your own ·
+     answers stay on this device until you copy them · the crops were placed
+     by machine and are unchecked: tap "wrong line" where a picture misses its
+     line</p>
+</header>
+<main>
+<h2>Dates</h2>
+<div class="row" id="heading_year">
+<h3>heading_year</h3>
+<img loading="lazy" src="img/heading_year.jpg" alt="line picture">
+<button class="wrongline" data-id="heading_year">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The register heading &quot;4ta Martii&quot; - does a year follow it on the page?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="heading_year" data-v="no year">no year</button><button class="opt" data-id="heading_year" data-v="1785">1785</button><button class="opt" data-id="heading_year" data-v="1786">1786</button><button class="opt" data-id="heading_year" data-v="other year (write it)">other year (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The entry records an actum of 29 March 1784 (the weekday formula fits 1784 exactly, and its own narrative says &quot;anno immediate elapso 1783&quot; for the December terminus). The volume is the protocollon of 1786. If the heading carries a year, it says when the relation was registered.</p>
+</div>
+<div class="row" id="dec_year">
+<h3>dec_year</h3>
+<img loading="lazy" src="img/dec_year.jpg" alt="line picture">
+<button class="wrongline" data-id="dec_year">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The year after &quot;anno immediate elapso&quot; - the digit after 178?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="dec_year" data-v="3">3</button><button class="opt" data-id="dec_year" data-v="5">5</button><button class="opt" data-id="dec_year" data-v="other digit (write it)">other digit (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The formula &quot;Monday after St Andrew&#x27;s day, i.e. 1 December&quot; fits 1783 (30 Nov 1783 was a Sunday) and not 1785 (a Wednesday); the same December dates are &quot;anno immediate elapso 1783&quot; twice in the entry. If the page says 5, the scribe slipped and the transcription keeps 1785.</p>
+</div>
+<div class="row" id="francis_day">
+<h3>francis_day</h3>
+<img loading="lazy" src="img/francis_day.jpg" alt="line picture">
+<button class="wrongline" data-id="francis_day">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Feria secunda post Festum S. Francisci ... die&quot; - the word before the day numeral, and the numeral itself</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="francis_day" data-v="in die 7va">in die 7va</button><button class="opt" data-id="francis_day" data-v="in die 8va">in die 8va</button><button class="opt" data-id="francis_day" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">St Francis is 4 October; in 1782 that was a Friday, so the Monday after is 7 October. The editor read &quot;indl~t 8ua&quot; - read the word and the digit.</p>
+</div>
+<div class="row" id="junii_word">
+<h3>junii_word</h3>
+<img loading="lazy" src="img/junii_word.jpg" alt="line picture">
+<button class="wrongline" data-id="junii_word">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word standing between &quot;sexta&quot; and &quot;sui Junii&quot; - what is it?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="junii_word" data-v="decima (the day is 16)">decima (the day is 16)</button><button class="opt" data-id="junii_word" data-v="Mens">Mens</button><button class="opt" data-id="junii_word" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Monday after Trinity Sunday 1783 was 16 June, so the day formula may be &quot;sexta decima&quot; - the 16th.</p>
+</div>
+<div class="row" id="tail_167v">
+<h3>tail_167v</h3>
+<img loading="lazy" src="img/tail_167v.jpg" alt="line picture">
+<button class="wrongline" data-id="tail_167v">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The entry breaks off mid-sentence at the foot of 167v (&quot;... Relictam viduam&quot;). Does the entry continue on the next leaf?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="tail_167v" data-v="continues on p. 168">continues on p. 168</button><button class="opt" data-id="tail_167v" data-v="ends here">ends here</button><button class="opt" data-id="tail_167v" data-v="do not know">do not know</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">If it continues, the entry is excerpted here and the site says so; if the archive&#x27;s leaf is lost or unread, the transcription ends where it ends. The next leaf is not among the scans.</p>
+</div>
+<h2>Names</h2>
+<div class="row" id="termilis">
+<h3>termilis</h3>
+<img loading="lazy" src="img/termilis.jpg" alt="line picture">
+<button class="wrongline" data-id="termilis">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The estate name before &quot;Kanino&quot; - read it (&quot;Termilis&quot;? &quot;Ternilis&quot;?)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="termilis" data-v="Ternilis">Ternilis</button><button class="opt" data-id="termilis" data-v="Termilis">Termilis</button><button class="opt" data-id="termilis" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">It stands again on 163v (&quot;Bona Ternilis[?] Kanino Swiątniki et Jaryszki&quot;), disposed of in other hands before 1729. Read the letters.</p>
+</div>
+<div class="row" id="odechowski">
+<h3>odechowski</h3>
+<img loading="lazy" src="img/odechowski.jpg" alt="line picture">
+<button class="wrongline" data-id="odechowski">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The husband of Victoria in &quot;3tio voto ... Odechowski&quot; - read the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="odechowski" data-v="Caroli">Caroli</button><button class="opt" data-id="odechowski" data-v="Michaeli">Michaeli</button><button class="opt" data-id="odechowski" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">On 164v the same couple stands as &quot;Magnificorum Caroli et Victoriae itidem de Prusimskie Odechowskich conjugum&quot;. If the word here is &quot;Michaeli&quot;, the two passages disagree and the genealogy follows the better attested one.</p>
+</div>
+<div class="row" id="zabriski">
+<h3>zabriski</h3>
+<img loading="lazy" src="img/zabriski.jpg" alt="line picture">
+<button class="wrongline" data-id="zabriski">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name after &quot;Magnifici Casimiri&quot; - Mariana&#x27;s second husband</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="zabriski" data-v="Zabriski">Zabriski</button><button class="opt" data-id="zabriski" data-v="Zawadzki">Zawadzki</button><button class="opt" data-id="zabriski" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;subalterno connubio Magnifici Casimiri Zabriski[?] Judicio Terrestris Brestensis&quot; - the surname to read.</p>
+</div>
+<div class="row" id="strzalko">
+<h3>strzalko</h3>
+<img loading="lazy" src="img/strzalko.jpg" alt="line picture">
+<button class="wrongline" data-id="strzalko">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name after &quot;a succ~oribus&quot; - who held Szetlewek before Golinski?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="strzalko" data-v="Strzałkowski">Strzałkowski</button><button class="opt" data-id="strzalko" data-v="Strzałkow + other word">Strzałkow + other word</button><button class="opt" data-id="strzalko" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;a succ~oribus Strzałko[?]iamis[?]&quot; - the two words after &quot;successoribus&quot; both stand open.</p>
+</div>
+<div class="row" id="rzekicka">
+<h3>rzekicka</h3>
+<img loading="lazy" src="img/rzekicka.jpg" alt="line picture">
+<button class="wrongline" data-id="rzekicka">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The widow&#x27;s name and her husband&#x27;s - &quot;Generosae Rzek[?]icka olim Generosi Jacobi Rzechicki[?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="rzekicka" data-v="Rzekucka / Rzechicki">Rzekucka / Rzechicki</button><button class="opt" data-id="rzekicka" data-v="Raczycka / Raczycki">Raczycka / Raczycki</button><button class="opt" data-id="rzekicka" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">A Raczycki family stands in the entry already (a load of 7,000 fl.); if these are they, the index joins them.</p>
+</div>
+<div class="row" id="obiesierski">
+<h3>obiesierski</h3>
+<img loading="lazy" src="img/obiesierski.jpg" alt="line picture">
+<button class="wrongline" data-id="obiesierski">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The husband of Apollonia - &quot;Generosi Sigismundi Obiesierski[?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="obiesierski" data-v="Obiesierski">Obiesierski</button><button class="opt" data-id="obiesierski" data-v="Oborski">Oborski</button><button class="opt" data-id="obiesierski" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The surname to read.</p>
+</div>
+<div class="row" id="obierunskie">
+<h3>obierunskie</h3>
+<img loading="lazy" src="img/obierunskie.jpg" alt="line picture">
+<button class="wrongline" data-id="obierunskie">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The family name - &quot;a Generosis Obierun[?]skie&quot; (it stands twice)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="obierunskie" data-v="Obierzunski">Obierzunski</button><button class="opt" data-id="obierunskie" data-v="Obierunski">Obierunski</button><button class="opt" data-id="obierunskie" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The family that released the 6,000 fl. to the Trąmpczyńskis in 1727.</p>
+</div>
+<div class="row" id="keszycki">
+<h3>keszycki</h3>
+<img loading="lazy" src="img/keszycki.jpg" alt="line picture">
+<button class="wrongline" data-id="keszycki">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name after &quot;successoribus&quot; - &quot;Kęszy[?]ciami[?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="keszycki" data-v="Kęszyckiami">Kęszyckiami</button><button class="opt" data-id="keszycki" data-v="Kęszygórami">Kęszygórami</button><button class="opt" data-id="keszycki" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The successors holding the 30,000 fl. charge on Pawłowo / Zernik.</p>
+</div>
+<div class="row" id="schedas_word">
+<h3>schedas_word</h3>
+<img loading="lazy" src="img/schedas_word.jpg" alt="line picture">
+<button class="wrongline" data-id="schedas_word">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word before &quot;schaedas trinas&quot; - read it</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="schedas_word" data-v="[nothing - just schedas]">[nothing - just schedas]</button><button class="opt" data-id="schedas_word" data-v="tres">tres</button><button class="opt" data-id="schedas_word" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;Fratram natu majorem [?]sc[h/t?]aedas trinas ... porrexisse&quot; - what stands before &quot;schaedas&quot;?</p>
+</div>
+<div class="row" id="ittis">
+<h3>ittis</h3>
+<img loading="lazy" src="img/ittis.jpg" alt="line picture">
+<button class="wrongline" data-id="ittis">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word after &quot;Se~ Rae~&quot; - the office of Paul Prusimski</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="ittis" data-v="Succamararii">Succamararii</button><button class="opt" data-id="ittis" data-v="Subthesaurarii">Subthesaurarii</button><button class="opt" data-id="ittis" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;Se~ Rae~ [?]ittis Fratrum intermedium&quot; - on 162 the same man is &quot;Succamarariis&quot; (podskarbi). Read what stands here.</p>
+</div>
+<div class="row" id="costensem">
+<h3>costensem</h3>
+<img loading="lazy" src="img/costensem.jpg" alt="line picture">
+<button class="wrongline" data-id="costensem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The court of the Oporowo condescensio - &quot;actis Castrensis Costensem[?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="costensem" data-v="Costinens[ibus?]">Costinens[ibus?]</button><button class="opt" data-id="costensem" data-v="Gostinens[ibus?]">Gostinens[ibus?]</button><button class="opt" data-id="costensem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Oporowo lay in the Poznań palatinate; read the court&#x27;s name.</p>
+</div>
+<div class="row" id="skoli">
+<h3>skoli</h3>
+<img loading="lazy" src="img/skoli.jpg" alt="line picture">
+<button class="wrongline" data-id="skoli">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The estate name - &quot;in Fundo Bonorum Skoli[s?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="skoli" data-v="Skoki">Skoki</button><button class="opt" data-id="skoli" data-v="Skoli[n]i">Skoli[n]i</button><button class="opt" data-id="skoli" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The grounds where the condescensio termini were held before the decree of Gniezno remitted the cause. Read the name.</p>
+</div>
+<div class="row" id="flottowa">
+<h3>flottowa</h3>
+<img loading="lazy" src="img/flottowa.jpg" alt="line picture">
+<button class="wrongline" data-id="flottowa">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name after &quot;Magnificam&quot; - &quot;[Fl/H?]ottowa&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="flottowa" data-v="Flottowa">Flottowa</button><button class="opt" data-id="flottowa" data-v="Hottowa">Hottowa</button><button class="opt" data-id="flottowa" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">She stands beside the Radoliński successors disputing the letter of 1736. Read the name.</p>
+</div>
+<div class="row" id="mokronos">
+<h3>mokronos</h3>
+<img loading="lazy" src="img/mokronos.jpg" alt="line picture">
+<button class="wrongline" data-id="mokronos">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The village of Peter Florkiewicz - &quot;de Villa Mokronos[??]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="mokronos" data-v="Mokronosi">Mokronosi</button><button class="opt" data-id="mokronos" data-v="Mokronosy">Mokronosy</button><button class="opt" data-id="mokronos" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the ending of the village name.</p>
+</div>
+<div class="row" id="lubraniecki">
+<h3>lubraniecki</h3>
+<img loading="lazy" src="img/lubraniecki.jpg" alt="line picture">
+<button class="wrongline" data-id="lubraniecki">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name of the Kalisz chamber judge - &quot;Magnificis Lu[s?]br[?]co Bogdanski&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="lubraniecki" data-v="Lubraniecki Bogdański">Lubraniecki Bogdański</button><button class="opt" data-id="lubraniecki" data-v="Lubomirski Bogdański">Lubomirski Bogdański</button><button class="opt" data-id="lubraniecki" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">He took part with Theresia née Rozdrażewska in the act of 3 June 1782. Read both name words.</p>
+</div>
+<div class="row" id="marszlyn">
+<h3>marszlyn</h3>
+<img loading="lazy" src="img/marszlyn.jpg" alt="line picture">
+<button class="wrongline" data-id="marszlyn">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">Joanna&#x27;s family name - &quot;Marszłynowna[?]&quot; (the mother of Katarzyna Rozdrażewska)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="marszlyn" data-v="Marszłynówna">Marszłynówna</button><button class="opt" data-id="marszlyn" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">A patronymic in -ówna would be the only one in the entry. Read the letters.</p>
+</div>
+<div class="row" id="sadi">
+<h3>sadi</h3>
+<img loading="lazy" src="img/sadi.jpg" alt="line picture">
+<button class="wrongline" data-id="sadi">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word after &quot;Feliciani Parys&quot; - &quot;sa[is/m?]di&quot;?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="sadi" data-v="secundi">secundi</button><button class="opt" data-id="sadi" data-v="samdi">samdi</button><button class="opt" data-id="sadi" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The sense points to &quot;secundi (voti)&quot; - of her second marriage, to Karol Rozdrażewski - after &quot;primi ... Feliciani Parys&quot;. Read the letters.</p>
+</div>
+<h2>Sums</h2>
+<div class="row" id="nierzychow_sum">
+<h3>nierzychow_sum</h3>
+<img loading="lazy" src="img/nierzychow_sum.jpg" alt="line picture">
+<button class="wrongline" data-id="nierzychow_sum">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The widow Nierzychowska&#x27;s load - &quot;[?]ginta millium fp&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="nierzychow_sum" data-v="octoginta (80,000)">octoginta (80,000)</button><button class="opt" data-id="nierzychow_sum" data-v="triginta (30,000)">triginta (30,000)</button><button class="opt" data-id="nierzychow_sum" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The same widow&#x27;s claim is &quot;Triginta millium fp&quot; on p. 167, and on 164 her load is &quot;Triginta Millium fp&quot;. If the page says octoginta here, the scribe slipped; if triginta, the reading is settled.</p>
+</div>
+<div class="row" id="triginta_veto">
+<h3>triginta_veto</h3>
+<img loading="lazy" src="img/triginta_veto.jpg" alt="line picture">
+<button class="wrongline" data-id="triginta_veto">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word after &quot;nongentorum Triginta&quot; - &quot;veto[?]&quot;?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="triginta_veto" data-v="octo (41,938 fl.)">octo (41,938 fl.)</button><button class="opt" data-id="triginta_veto" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The share of each fraternal caput: 41,930 fl. + this word. &quot;octo&quot; would complete the figure.</p>
+</div>
+<div class="row" id="kowski_name">
+<h3>kowski_name</h3>
+<img loading="lazy" src="img/kowski_name.jpg" alt="line picture">
+<button class="wrongline" data-id="kowski_name">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name before &quot;-kowski&quot; (a load of 700 fl.)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="kowski_name" data-v="(read the name - write it)">(read the name - write it)</button><button class="opt" data-id="kowski_name" data-v="Zaleski again">Zaleski again</button><button class="opt" data-id="kowski_name" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;Generos[?] [?]kowski septingentorum fp&quot; - the surname is cut at its start. Read what stands.</p>
+</div>
+<div class="row" id="bowski_name">
+<h3>bowski_name</h3>
+<img loading="lazy" src="img/bowski_name.jpg" alt="line picture">
+<button class="wrongline" data-id="bowski_name">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The name before &quot;-bowski&quot; (a load of 666 fl. g. 20)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="bowski_name" data-v="(read the name - write it)">(read the name - write it)</button><button class="opt" data-id="bowski_name" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;Generos[?] [?]bowski sexcentorum sexuginta sex fl.&quot; - read the surname.</p>
+</div>
+<div class="row" id="money_formula">
+<h3>money_formula</h3>
+<img loading="lazy" src="img/money_formula.jpg" alt="line picture">
+<button class="wrongline" data-id="money_formula">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The money formula after the figures - here &quot;sex tlor~[??] ge~[?]&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="money_formula" data-v="flor~ gross~">flor~ gross~</button><button class="opt" data-id="money_formula" data-v="fl. gr.">fl. gr.</button><button class="opt" data-id="money_formula" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Elsewhere the entry writes &quot;fl. g~ 20 Polonicalium&quot; and &quot;flor~ gros~ 5 Polon~&quot;. Read what stands in this line (the same question covers &quot;fl. gn[?] 20&quot; two lines below).</p>
+</div>
+<div class="row" id="pawlowa_word">
+<h3>pawlowa_word</h3>
+<img loading="lazy" src="img/pawlowa_word.jpg" alt="line picture">
+<button class="wrongline" data-id="pawlowa_word">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word before &quot;Pawłowa&quot; - &quot;ex [?]tio Pawłowa&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="pawlowa_word" data-v="praedio">praedio</button><button class="opt" data-id="pawlowa_word" data-v="fund[o]">fund[o]</button><button class="opt" data-id="pawlowa_word" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The 12,000 fl. charge &quot;from the ... of Pawłowa&quot; - read the word.</p>
+</div>
+<h2>Words</h2>
+<div class="row" id="reponidem">
+<h3>reponidem</h3>
+<img loading="lazy" src="img/reponidem.jpg" alt="line picture">
+<button class="wrongline" data-id="reponidem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;quietatio ... non reponi[dem?]&quot; - the verb form</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="reponidem" data-v="reponendam">reponendam</button><button class="opt" data-id="reponidem" data-v="repositam">repositam</button><button class="opt" data-id="reponidem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The quietation of the 3,500 ducats and the silver was not brought back into court. Read the ending.</p>
+</div>
+<div class="row" id="procet">
+<h3>procet</h3>
+<img loading="lazy" src="img/procet.jpg" alt="line picture">
+<button class="wrongline" data-id="procet">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;procet[?] divisionem perfecerant et procet[?] Decretum&quot; - the word (it stands twice)</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="procet" data-v="profectum">profectum</button><button class="opt" data-id="procet" data-v="praecise">praecise</button><button class="opt" data-id="procet" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word: the division was completed &quot;in that quality and quantity&quot; ...</p>
+</div>
+<div class="row" id="quirrimo">
+<h3>quirrimo</h3>
+<img loading="lazy" src="img/quirrimo.jpg" alt="line picture">
+<button class="wrongline" data-id="quirrimo">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;nulli casui fortuito subjectus quirrimo[?]&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="quirrimo" data-v="quirimo">quirimo</button><button class="opt" data-id="quirrimo" data-v="usurario">usurario</button><button class="opt" data-id="quirrimo" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The sums had out-run their provisions for more than sixty years; read the word after &quot;subjectus&quot;.</p>
+</div>
+<div class="row" id="quani">
+<h3>quani</h3>
+<img loading="lazy" src="img/quani.jpg" alt="line picture">
+<button class="wrongline" data-id="quani">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;libertatemque sui a quani[?] eorundem successorum impetitione&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="quani" data-v="quanta">quanta</button><button class="opt" data-id="quani" data-v="quavis">quavis</button><button class="opt" data-id="quani" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word after &quot;a&quot;.</p>
+</div>
+<div class="row" id="brtis">
+<h3>brtis</h3>
+<img loading="lazy" src="img/brtis.jpg" alt="line picture">
+<button class="wrongline" data-id="brtis">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The word between &quot;Oporowa&quot; and &quot;Oporowka&quot; - &quot;[br?]tis&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="brtis" data-v="sortis">sortis</button><button class="opt" data-id="brtis" data-v="cum sortibus">cum sortibus</button><button class="opt" data-id="brtis" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The second scheda lists &quot;Oporowa [br?]tis Oporowka Kałowa&quot; - the Oporowo with its parts Oporówka and Kałowo. Read the word.</p>
+</div>
+<div class="row" id="hisc_e">
+<h3>hisc_e</h3>
+<img loading="lazy" src="img/hisc_e.jpg" alt="line picture">
+<button class="wrongline" data-id="hisc_e">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;liberi pronunciatis, hisc[e?] partibus negotium inducere jubet&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="hisc_e" data-v="hisce">hisce</button><button class="opt" data-id="hisc_e" data-v="ipsis">ipsis</button><button class="opt" data-id="hisc_e" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word before &quot;partibus&quot;.</p>
+</div>
+<div class="row" id="auguratem">
+<h3>auguratem</h3>
+<img loading="lazy" src="img/auguratem.jpg" alt="line picture">
+<button class="wrongline" data-id="auguratem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;terminus ... in augurat[em?] intercessit&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="auguratem" data-v="augurationem">augurationem</button><button class="opt" data-id="auguratem" data-v="augustam">augustam</button><button class="opt" data-id="auguratem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The summons term lapsed &quot;in ...&quot; - read the word.</p>
+</div>
+<div class="row" id="addidem">
+<h3>addidem</h3>
+<img loading="lazy" src="img/addidem.jpg" alt="line picture">
+<button class="wrongline" data-id="addidem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;adjudante et addi[dem?] mae[s?] ad prostrandum Juramentum&quot; - the two words</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="addidem" data-v="(read them - write it)">(read them - write it)</button><button class="opt" data-id="addidem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Before the oath was taken. Read both words.</p>
+</div>
+<div class="row" id="adpsit">
+<h3>adpsit</h3>
+<img loading="lazy" src="img/adpsit.jpg" alt="line picture">
+<button class="wrongline" data-id="adpsit">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;aliquod documenta ad[?]psit et subscripsit&quot; - the verb</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="adpsit" data-v="adhaesit">adhaesit</button><button class="opt" data-id="adpsit" data-v="adspexit">adspexit</button><button class="opt" data-id="adpsit" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">He attached some documents to his summary and subscribed. Read the letters in the middle.</p>
+</div>
+<div class="row" id="minipali">
+<h3>minipali</h3>
+<img loading="lazy" src="img/minipali.jpg" alt="line picture">
+<button class="wrongline" data-id="minipali">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;agentibus ulteri[us?] in minipali[?] negotio&quot; - the word after &quot;in&quot;</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="minipali" data-v="principali">principali</button><button class="opt" data-id="minipali" data-v="minipali">minipali</button><button class="opt" data-id="minipali" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The session continues &quot;in the ... business&quot;. &quot;principali&quot; is proposed from sense; read the letters.</p>
+</div>
+<div class="row" id="go_naniae">
+<h3>go_naniae</h3>
+<img loading="lazy" src="img/go_naniae.jpg" alt="line picture">
+<button class="wrongline" data-id="go_naniae">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Feria 2da ante Festum Assumptionis in actum[?] Go[?]naniae[?] anno 1737&quot; - the two words</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="go_naniae" data-v="(read them - write it)">(read them - write it)</button><button class="opt" data-id="go_naniae" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The complanatio of Mariana&#x27;s dowry was levied at Poznań on the Monday before the Assumption. Read the two words after &quot;in actum&quot;.</p>
+</div>
+<div class="row" id="eisneunt">
+<h3>eisneunt</h3>
+<img loading="lazy" src="img/eisneunt.jpg" alt="line picture">
+<button class="wrongline" data-id="eisneunt">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;transactionesque posteriores praemissam summam non eisneunt[?]&quot; - the verb</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="eisneunt" data-v="tangunt">tangunt</button><button class="opt" data-id="eisneunt" data-v="eunt">eunt</button><button class="opt" data-id="eisneunt" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The later transactions do not ... the sum of 30,000 fl. Read the verb.</p>
+</div>
+<div class="row" id="hendo">
+<h3>hendo</h3>
+<img loading="lazy" src="img/hendo.jpg" alt="line picture">
+<button class="wrongline" data-id="hendo">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;portionem Maturnam extra hendo[?]&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="hendo" data-v="[h]endo">[h]endo</button><button class="opt" data-id="hendo" data-v="ordinem">ordinem</button><button class="opt" data-id="hendo" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word after &quot;extra&quot;.</p>
+</div>
+<div class="row" id="compin">
+<h3>compin</h3>
+<img loading="lazy" src="img/compin.jpg" alt="line picture">
+<button class="wrongline" data-id="compin">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;si Judicio suo co[m/ns]pin[dem?]&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="compin" data-v="comprend[er]e">comprend[er]e</button><button class="opt" data-id="compin" data-v="compingere">compingere</button><button class="opt" data-id="compin" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word after &quot;co&quot;.</p>
+</div>
+<div class="row" id="arbitatem">
+<h3>arbitatem</h3>
+<img loading="lazy" src="img/arbitatem.jpg" alt="line picture">
+<button class="wrongline" data-id="arbitatem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Judicium Arbita[tem?]&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="arbitatem" data-v="arbitratum">arbitratum</button><button class="opt" data-id="arbitatem" data-v="arbitri">arbitri</button><button class="opt" data-id="arbitatem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the ending.</p>
+</div>
+<div class="row" id="insto">
+<h3>insto</h3>
+<img loading="lazy" src="img/insto.jpg" alt="line picture">
+<button class="wrongline" data-id="insto">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;anno 1736to insto[?] profectitiam&quot; - the two words</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="insto" data-v="(read them - write it)">(read them - write it)</button><button class="opt" data-id="insto" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read what stands before &quot;profectitiam&quot;.</p>
+</div>
+<div class="row" id="subtam">
+<h3>subtam</h3>
+<img loading="lazy" src="img/subtam.jpg" alt="line picture">
+<button class="wrongline" data-id="subtam">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;pro debito subta~am Golinscianam maturnam gravante&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="subtam" data-v="subnatam">subnatam</button><button class="opt" data-id="subtam" data-v="substantam">substantam</button><button class="opt" data-id="subtam" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word: the maternal Golinscian debt bearing down.</p>
+</div>
+<div class="row" id="ressibilibus">
+<h3>ressibilibus</h3>
+<img loading="lazy" src="img/ressibilibus.jpg" alt="line picture">
+<button class="wrongline" data-id="ressibilibus">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;res[s?]ibilibus ad varias [E?]ulesias&quot; - the two words</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="ressibilibus" data-v="responsalibus / ecclesiis">responsalibus / ecclesiis</button><button class="opt" data-id="ressibilibus" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The inscriptiones of Oporowo ran to various churches. Read both words.</p>
+</div>
+<div class="row" id="exdiuim">
+<h3>exdiuim</h3>
+<img loading="lazy" src="img/exdiuim.jpg" alt="line picture">
+<button class="wrongline" data-id="exdiuim">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Determinata ... Maturnae substantiae exdiuim[?]&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="exdiuim" data-v="extra">extra</button><button class="opt" data-id="exdiuim" data-v="ex divisione">ex divisione</button><button class="opt" data-id="exdiuim" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word after &quot;substantiae&quot;.</p>
+</div>
+<div class="row" id="illas_manente">
+<h3>illas_manente</h3>
+<img loading="lazy" src="img/illas_manente.jpg" alt="line picture">
+<button class="wrongline" data-id="illas_manente">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;quo ad fortunam utramque illa[s/m?] manente&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="illas_manente" data-v="illas">illas</button><button class="opt" data-id="illas_manente" data-v="illam">illam</button><button class="opt" data-id="illas_manente" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word after &quot;utramque&quot;.</p>
+</div>
+<div class="row" id="pro_mimixta">
+<h3>pro_mimixta</h3>
+<img loading="lazy" src="img/pro_mimixta.jpg" alt="line picture">
+<button class="wrongline" data-id="pro_mimixta">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;soli donum binorum et midii pro[??]&quot; - the two letters</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="pro_mimixta" data-v="(read them - write it)">(read them - write it)</button><button class="opt" data-id="pro_mimixta" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">After &quot;duorum et medii&quot; - read what stands before &quot;mimixta&quot;.</p>
+</div>
+<div class="row" id="summus">
+<h3>summus</h3>
+<img loading="lazy" src="img/summus.jpg" alt="line picture">
+<button class="wrongline" data-id="summus">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;in uni originalis summ[us?]&quot; - the ending</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="summus" data-v="summus">summus</button><button class="opt" data-id="summus" data-v="summa">summa</button><button class="opt" data-id="summus" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the ending of the word.</p>
+</div>
+<div class="row" id="scriptuis">
+<h3>scriptuis</h3>
+<img loading="lazy" src="img/scriptuis.jpg" alt="line picture">
+<button class="wrongline" data-id="scriptuis">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;numeraris scriptu[?]is&quot; - the ending</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="scriptuis" data-v="scripturis">scripturis</button><button class="opt" data-id="scriptuis" data-v="scriptis">scriptis</button><button class="opt" data-id="scriptuis" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the ending.</p>
+</div>
+<div class="row" id="differ">
+<h3>differ</h3>
+<img loading="lazy" src="img/differ.jpg" alt="line picture">
+<button class="wrongline" data-id="differ">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;differ[?]itatem scriptionis&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="differ" data-v="diversitatem">diversitatem</button><button class="opt" data-id="differ" data-v="differentiam">differentiam</button><button class="opt" data-id="differ" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The hand of the letter of 1736 was not that of the late Andrew Radoliński. Read the word.</p>
+</div>
+<div class="row" id="gmae">
+<h3>gmae</h3>
+<img loading="lazy" src="img/gmae.jpg" alt="line picture">
+<button class="wrongline" data-id="gmae">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;post Dominicam [?]gmae~ anno 1745&quot; - the word</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="gmae" data-v="Gaudete">Gaudete</button><button class="opt" data-id="gmae" data-v="Judica">Judica</button><button class="opt" data-id="gmae" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The Sunday before which Katarzyna&#x27;s 40,000 fl. were inscribed. Read the word.</p>
+</div>
+<div class="row" id="prodisse">
+<h3>prodisse</h3>
+<img loading="lazy" src="img/prodisse.jpg" alt="line picture">
+<button class="wrongline" data-id="prodisse">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;[?]bus~ pro[?]isse&quot; - the two words</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="prodisse" data-v="(read them - write it)">(read them - write it)</button><button class="opt" data-id="prodisse" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Before &quot;verum hoc Decreto Condicionali&quot; - read what stands.</p>
+</div>
+<div class="row" id="subdapiferida">
+<h3>subdapiferida</h3>
+<img loading="lazy" src="img/subdapiferida.jpg" alt="line picture">
+<button class="wrongline" data-id="subdapiferida">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Dominico Zboinatis Subdapifinda[?] Bidgostiensi&quot; - the office form and the family name</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="subdapiferida" data-v="Subdapiferida">Subdapiferida</button><button class="opt" data-id="subdapiferida" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The scribe&#x27;s office forms run -ida: &quot;Castellanida&quot; here, &quot;Dapiferidae&quot; in Konin Gr.118, &quot;Thesaurarida&quot; in Gr.117. Read the letters after &quot;Subdapifer&quot; and the name before it.</p>
+</div>
+<h2>Proposals</h2>
+<div class="row" id="p_sabbo">
+<h3>p_sabbo</h3>
+<img loading="lazy" src="img/p_sabbo.jpg" alt="line picture">
+<button class="wrongline" data-id="p_sabbo">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;sub~bo&quot; was read as &quot;sab~bo&quot; (sabbato) - confirm or revert</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_sabbo" data-v="sab~bo stands">sab~bo stands</button><button class="opt" data-id="p_sabbo" data-v="revert to sub~bo">revert to sub~bo</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">13 December 1783 was the Saturday after the Immaculate Conception; &quot;sab~bo&quot; and &quot;sabbo~&quot; stand twice later in the entry.</p>
+</div>
+<div class="row" id="p_diversae">
+<h3>p_diversae</h3>
+<img loading="lazy" src="img/p_diversae.jpg" alt="line picture">
+<button class="wrongline" data-id="p_diversae">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;dive[n/r?]ae formae&quot; was read as &quot;diversae formae&quot; - confirm or revert</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_diversae" data-v="diversae stands">diversae stands</button><button class="opt" data-id="p_diversae" data-v="revert to divinae">revert to divinae</button><button class="opt" data-id="p_diversae" data-v="revert to divennae">revert to divennae</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The silverware of the late Stephen Paul and Antoni, &quot;of ... form&quot;.</p>
+</div>
+<div class="row" id="p_conges">
+<h3>p_conges</h3>
+<img loading="lazy" src="img/p_conges.jpg" alt="line picture">
+<button class="wrongline" data-id="p_conges">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;[?]ges~&quot; was read as &quot;con~ges~&quot; (conjuges) in its three places - confirm or revert</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_conges" data-v="con~ges~ stands">con~ges~ stands</button><button class="opt" data-id="p_conges" data-v="revert">revert</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Confirmed on the page image at the instance on p. 165 (&quot;Theresiam de Golinskie con~ges ab una&quot;).</p>
+</div>
+<div class="row" id="p_solutam">
+<h3>p_solutam</h3>
+<img loading="lazy" src="img/p_solutam.jpg" alt="line picture">
+<button class="wrongline" data-id="p_solutam">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;[lu?]atam&quot; is proposed as &quot;solutam&quot; (&quot;as if paid over by Kałowski&quot;) - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_solutam" data-v="solutam">solutam</button><button class="opt" data-id="p_solutam" data-v="l[u]atam">l[u]atam</button><button class="opt" data-id="p_solutam" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the letters before &quot;atam&quot;.</p>
+</div>
+<div class="row" id="p_sororem">
+<h3>p_sororem</h3>
+<img loading="lazy" src="img/p_sororem.jpg" alt="line picture">
+<button class="wrongline" data-id="p_sororem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;fororem[?]&quot; is proposed as &quot;sororem&quot; (&quot;this last sister&quot;) - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_sororem" data-v="sororem">sororem</button><button class="opt" data-id="p_sororem" data-v="fororem">fororem</button><button class="opt" data-id="p_sororem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Mariana is the third daughter; &quot;soror&quot; fits the sense. Read the first letter.</p>
+</div>
+<div class="row" id="p_kotarbski">
+<h3>p_kotarbski</h3>
+<img loading="lazy" src="img/p_kotarbski.jpg" alt="line picture">
+<button class="wrongline" data-id="p_kotarbski">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;Kołarbski[?]&quot; is proposed as &quot;Kotarbski&quot; (the family as on p. 165) - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_kotarbski" data-v="Kotarbski">Kotarbski</button><button class="opt" data-id="p_kotarbski" data-v="Kołarbski">Kołarbski</button><button class="opt" data-id="p_kotarbski" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the fourth letter (ł or t).</p>
+</div>
+<div class="row" id="p_alterius">
+<h3>p_alterius</h3>
+<img loading="lazy" src="img/p_alterius.jpg" alt="line picture">
+<button class="wrongline" data-id="p_alterius">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;altenius [post/parte?]&quot; - proposed: &quot;alterius post&quot; (the second wadion, made after the sterile death of 1708) - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_alterius" data-v="alterius post">alterius post</button><button class="opt" data-id="p_alterius" data-v="altenius post">altenius post</button><button class="opt" data-id="p_alterius" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">&quot;altenius&quot; is not a Latin word. Read both words.</p>
+</div>
+<div class="row" id="p_actis">
+<h3>p_actis</h3>
+<img loading="lazy" src="img/p_actis.jpg" alt="line picture">
+<button class="wrongline" data-id="p_actis">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;coram autis[?] Castrensis&quot; is proposed as &quot;coram actis Castrensis&quot; - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_actis" data-v="actis">actis</button><button class="opt" data-id="p_actis" data-v="autis">autis</button><button class="opt" data-id="p_actis" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">The formula stands four times in the entry. Read the letters.</p>
+</div>
+<div class="row" id="p_autem">
+<h3>p_autem</h3>
+<img loading="lazy" src="img/p_autem.jpg" alt="line picture">
+<button class="wrongline" data-id="p_autem">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">&quot;jam autoni[?] indictionem&quot; is proposed as &quot;jam autem&quot; - rule</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="p_autem" data-v="autem">autem</button><button class="opt" data-id="p_autem" data-v="other (write it)">other (write it)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Read the word: &quot;now however the indiction ... was removed&quot;.</p>
+</div>
+<h2>Principles</h2>
+<div class="row" id="pr_nieszwiez">
+<h3>pr_nieszwiez</h3>
+<img loading="lazy" src="img/pr_nieszwiez.jpg" alt="line picture">
+<button class="wrongline" data-id="pr_nieszwiez">The picture shows the wrong line (the crop was placed by machine and unchecked)</button>
+<p class="q">The endings of &quot;Nieszczeviec-&quot; (the captain of Nieśwież, 12 places) were completed by the grammar of each sentence (dative -i, accusative -em, genitive -is), the scribe&#x27;s stem kept. Rule on the principle</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="pr_nieszwiez" data-v="accept the completions">accept the completions</button><button class="opt" data-id="pr_nieszwiez" data-v="review each on a later sheet">review each on a later sheet</button><button class="opt" data-id="pr_nieszwiez" data-v="revert all">revert all</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">Sample rows: &quot;Capitaneo Niszczeviens[em?]&quot; here; &quot;Capitaneum Nieszczevice[m?]&quot; on 161v; &quot;in archivo ... Nieszczevicen[em?]&quot; on 161v. The same rule completed ~60 other flagged case endings (the list with its witnesses: intake/changes_applied.md).</p>
+</div>
+<div class="row" id="pr_changes">
+<h3>pr_changes</h3>
+
+
+<p class="q">The 100+ settled readings (case endings completed where the grammar admits one reading, formulas completed, the scribe&#x27;s spellings kept) are in intake/changes_applied.md, table by page with the witness for each. Accept the lot?</p>
+<p class="ctx"></p>
+<div class="opts"><button class="opt" data-id="pr_changes" data-v="accept">accept</button><button class="opt" data-id="pr_changes" data-v="I will review the list before it stands">I will review the list before it stands</button><button class="opt" data-id="pr_changes" data-v="revert some (write which)">revert some (write which)</button></div>
+<input class="free" type="text" placeholder="or write the reading">
+<p class="note">This row needs no scan - it rules on the principle and the record.</p>
+</div>
+</main>
+<div id="bar">
+  <button id="copy">Copy answers</button>
+  <button id="clear">Clear</button>
+  <span id="status"></span>
+</div>
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9;padding:16px;overflow:auto;">
+  <div style="background:#fff;max-width:700px;margin:20px auto;padding:14px;border-radius:8px;">
+    <p style="margin-top:0">Copy this block back into the chat (or to the desktop):</p>
+    <textarea id="out" readonly></textarea>
+    <p><button id="docopy" style="padding:10px 18px">Copy to clipboard</button>
+       <button id="close" style="padding:10px 18px">Close</button></p>
+  </div>
+</div>
+<script>
+var K = 'rel1181-answers';
+var saved = {};
+try { saved = JSON.parse(localStorage.getItem(K) || '{}'); } catch (e) {}
+function mark(id) {
+  var row = document.getElementById(id);
+  if (!row) return;
+  var val = saved[id] || '';
+  row.querySelectorAll('.opt').forEach(function (b) {
+    b.classList.toggle('chosen', b.dataset.v === val);
+  });
+  var w = row.querySelector('.wrongline');
+  if (w) w.classList.toggle('chosen', val === 'WRONG LINE');
+  var f = row.querySelector('.free');
+  var isFree = val && val !== 'WRONG LINE' &&
+    !row.querySelector('.opt[data-v="' + val.replace(/"/g, '\\"') + '"]');
+  f.classList.toggle('chosen', isFree);
+  if (isFree) f.value = val;
+}
+document.querySelectorAll('.opt').forEach(function (b) {
+  b.addEventListener('click', function () {
+    saved[b.dataset.id] = b.dataset.v;
+    localStorage.setItem(K, JSON.stringify(saved));
+    mark(b.dataset.id);
+  });
+});
+document.querySelectorAll('.free').forEach(function (f) {
+  f.addEventListener('input', function () {
+    var id = f.closest('.row').id;
+    if (f.value.trim()) { saved[id] = f.value.trim(); }
+    else { delete saved[id]; }
+    localStorage.setItem(K, JSON.stringify(saved));
+    mark(id);
+  });
+});
+document.querySelectorAll('.wrongline').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var id = b.dataset.id;
+    if (saved[id] === 'WRONG LINE') { delete saved[id]; }
+    else { saved[id] = 'WRONG LINE'; }
+    localStorage.setItem(K, JSON.stringify(saved));
+    mark(id);
+  });
+});
+document.getElementById('copy').addEventListener('click', function () {
+  var lines = Object.keys(saved).sort().map(function (k) {
+    return k + ': ' + saved[k];
+  });
+  document.getElementById('out').value =
+    'rel1181 spot sheet answers (' + lines.length + ' of 66):\n' +
+    lines.join('\n');
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('out').select();
+});
+document.getElementById('docopy').addEventListener('click', function () {
+  navigator.clipboard.writeText(document.getElementById('out').value)
+    .then(function () { close_m('copied'); })
+    .catch(function () { close_m('select and copy by hand'); });
+});
+document.getElementById('close').addEventListener('click', function () { close_m(''); });
+function close_m(msg) {
+  document.getElementById('modal').style.display = 'none';
+  document.getElementById('status').textContent = msg;
+}
+document.getElementById('clear').addEventListener('click', function () {
+  if (!confirm('Clear every answer on this device?')) return;
+  saved = {}; localStorage.removeItem(K);
+  document.querySelectorAll('.row').forEach(function (r) { mark(r.id); });
+});
+document.querySelectorAll('.row').forEach(function (r) { mark(r.id); });
+</script>
+</body>
+</html>
